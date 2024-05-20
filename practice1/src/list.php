@@ -41,7 +41,7 @@ db_destroy_conn($conn);
     <main>
         <table>
             <colgroup>
-                <col width="25%">
+                <col width="20%">
                 <col width="50%">
                 <col width="30%">
             </colgroup>
@@ -50,31 +50,18 @@ db_destroy_conn($conn);
                 <th>제목</th>
                 <th>작성일자</th>
             </tr>
-            <tr>
-                <td>5</td>
-                <td>5번게시글</td>
-                <td>2023/09/20/14:50</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>4번게시글</td>
-                <td>2023/09/20/13:50</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>3번게시글</td>
-                <td>2023/09/20/12:50</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>2번게시글</td>
-                <td>2023/09/20/11:50</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1번게시글</td>
-                <td>2023/09/20/10:50</td>
-            </tr>
+            <?php
+                // 게시글 목록 생성
+                foreach($result as $item) {
+            ?>
+                    <tr>
+                        <td><?php echo $item["id"]; ?></td>
+                        <td><?php echo $item["title"]; ?></td>
+                        <td><?php echo $item["create_at"]; ?></td>
+                    </tr>
+            <?php
+                } 
+            ?>
         </table>
         <section>
             <a href="#">이전</a>
