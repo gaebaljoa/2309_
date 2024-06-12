@@ -1,0 +1,16 @@
+/* 전체 설정 */
+* {
+    padding: 0;
+	/* margin: 0; */
+	box-sizing: border-box;
+	text-decoration: none; 
+    /* font-size: 10px; */
+    /* line-height: 10px; */
+}
+
+/* 헤더 설정 */
+#header {
+    width: 1280px;
+    margin: 0 auto;
+    background-color: aquamarine;
+}
