@@ -11,6 +11,65 @@
 /* 헤더 설정 */
 #header {
     width: 1280px;
+    height: 215px;
     margin: 0 auto;
     background-color: aquamarine;
+}
+
+/* 헤더 모든 요소 전체 wrap */
+#topSearchWrap {
+    position: relative;
+}
+
+/* 헤더 - 바로가기 메뉴 */
+.btn_nav {
+    position: absolute;
+    /* #topSearchWrap가 relative */
+    top: 0px;
+    left: 0px;
+    width: 33px;
+    border: none;
+    background: none;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.btn_nav::after {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.9511cab7.png);
+    background-size: 451px 429px;
+    background-position: -326px -161px;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.btn_pay {
+    position: absolute;
+    top: 5px;
+    left: 41px;
+}
+
+/* 헤더 - 검색창 영역*/
+#topSearchArea {
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    /* z-index: 10; */
+    width: 706px;
+    border: 1px solid #03c75a;
+    border-radius: 33px;
+}
+
+/* 헤더 - 검색창 input 영역 */
+.search_area{
+    width: 639px;
+    height: 58px;
 }

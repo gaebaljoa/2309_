@@ -11,13 +11,22 @@
     <div id="header" class="header">
         <!-- 헤더 검색바영역 크기 -->
         <div id="topSearchWrap" class="header_inner">
-            <div class="nav">바로가기</div>
-            <div class="pay">네이버페이</div>
+            <div id="topAsideButton">
+                <button type="button" class="btn_nav">
+                    <span class="blind">확장영역</span>
+                </button>
+            </div>
+            <div class="btn_pay">네이버페이</div>
+            <div class="btn_talk">네이버톡</div>
+            <div class="btn_notify">알림&혜택</div>
+            <div class="btn_shopping">장바구니</div>
             <!-- 검색바 + 버튼 -->
             <div id="topSearchArea" class="search_area">
                 <h1>N</h1>
                 <form action="#" name="search_area" method="get">
-                    <input type="text" id="search" placeholder="검색어를 입력해 주세요.">
+                    <div class="search_area">
+                        <input type="text" id="search" placeholder="검색어를 입력해 주세요.">
+                    </div>
                     <button type="submit" class="btn_search">
                         <span>검색버튼</span>
                     </button>
