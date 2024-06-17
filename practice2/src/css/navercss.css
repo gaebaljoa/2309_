@@ -14,6 +14,7 @@
     height: 215px;
     margin: 0 auto;
     background-color: aquamarine;
+    position: relative;
 }
 
 /* 헤더 모든 요소 전체 wrap */
@@ -23,13 +24,17 @@
 
 /* 헤더 - 바로가기 메뉴 */
 .btn_nav {
-    position: absolute;
+    /* position: absolute; */
     /* #topSearchWrap가 relative */
-    top: 0px;
+    /* top: 0px;
     left: 0px;
     width: 33px;
     border: none;
-    background: none;
+    background: none; */
+    overflow: visible;
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
 }
 .blind {
     position: absolute;
@@ -51,11 +56,35 @@
     position: relative;
 }
 
+/* 헤더 - 네이버페이 */
 .btn_pay {
-    position: absolute;
-    top: 5px;
-    left: 41px;
+    /* position: absolute; */
+    /* top: 5px;
+    left: 41px; */
+    position: relative;
+    display: block;
+    padding: 8px;
 }
+.btn_pay::after {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
+    background-size: 442px 434px;
+    background-position: -285px -41px;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
 
 /* 헤더 - 검색창 영역*/
 #topSearchArea {

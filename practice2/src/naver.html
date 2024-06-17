@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/navercss.css">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
     <title>네이버입니당</title>
 </head>
 <body>
     <!-- 헤더 전체 크기 -->
     <div id="header" class="header">
-        <!-- 헤더 검색바영역 크기 -->
         <div id="topSearchWrap" class="header_inner">
+            <!-- 바로가기 햄버거(좌측) -->
             <div id="topAsideButton">
                 <button type="button" class="btn_nav">
                     <span class="blind">확장영역</span>
                 </button>
             </div>
-            <div class="btn_pay">네이버페이</div>
+            <!-- 네이버페이(좌측) -->
+            <div id="topPayArea">
+                <a href="https://order.pay.naver.com/home" class="btn_pay">
+                    <span class="blind">확장영역</span>
+                </a>
+            </div>
+            <!-- 네이버톡(우측) -->
             <div class="btn_talk">네이버톡</div>
+            <!-- 알림(우측) -->
             <div class="btn_notify">알림&혜택</div>
+            <!-- 장바구니(우측) -->
             <div class="btn_shopping">장바구니</div>
             <!-- 검색바 + 버튼 -->
             <div id="topSearchArea" class="search_area">
-                <h1>N</h1>
+                <h1 class="logo">
+                </h1>
                 <form action="#" name="search_area" method="get">
                     <div class="search_area">
                         <input type="text" id="search" placeholder="검색어를 입력해 주세요.">
