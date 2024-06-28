@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/navercss.css">
+    <link rel="stylesheet" href="./css/navercommon.css">
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
     <title>네이버입니당</title>
 </head>
@@ -12,7 +12,7 @@
     <div id="header" class="header">
         <div id="topSearchWrap" class="header_inner">
             <!-- 바로가기 햄버거(좌측) -->
-            <div id="topAsideButton">
+            <div id="topNavButton">
                 <button type="button" class="btn_nav">
                     <span class="blind">확장영역</span>
                 </button>
@@ -29,9 +29,22 @@
             <div class="btn_notify">알림&혜택</div>
             <!-- 장바구니(우측) -->
             <div class="btn_shopping">장바구니</div>
+            <!-- 검색영역 special-logo -->
+            <div id="special-logo" class="search_special_bg"></div>
             <!-- 검색바 + 버튼 -->
             <div id="topSearchArea" class="search_area">
-                <h1 class="logo">
+                <h1 class="search_logo">
+                    <a href="/" class="link_naver type_motion_hat is_fadeout">
+                        <img src="https://s.pstatic.net/static/www/mobile/edit/20230516_0/upload_1684217675277OZzsu.gif" width="58" height="58" alt="NAVER">
+                    </a>
+                    <a href="/" class="link_naver type_motion_n is_fadein">
+                        <span class="ico_n_logo_svg">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
+                            </svg>
+                        </span>
+                        <span class="blind">NAVER</span>
+                    </a>
                 </h1>
                 <form action="#" name="search_area" method="get">
                     <div class="search_area">

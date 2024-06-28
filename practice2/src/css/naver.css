@@ -1,0 +1,135 @@
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+body, input, textarea, select, button, table {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+input, button {
+    border-radius: 0;
+    border: 0;
+}
+
+body, input, textarea, select, button, table {
+    color: #101010;
+    color: var(--color_body);
+    font-size: 12px;
+    line-height: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#header .header_inner {
+    z-index: 120;
+    position: relative;
+    height: 156px;
+    padding: 52px 0 8px;
+}
+
+#header .header_inner .search_special_bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -10;
+    overflow: hidden;
+    height: 215px;
+}
+
+/* -------- search_group_inner 내부 요소들 --------- */
+
+#header .header_inner .search_area {
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    z-index: 10;
+    width: 706px;
+    border: 1px solid #03c75a;
+    border-radius: 33px;
+    background-color: #fff;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#header .header_inner .search_group_inner {
+    position: relative;
+    padding-left: 67px;
+}
+
+#header .header_inner .search_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#header .header_inner .search_box {
+    position: absolute;
+    top: 0;
+    right: 61px;
+    bottom: 0;
+    z-index: 210;
+    width: 56px;
+}
+
+#header .header_inner .search_box button[class^=btn_] {
+    cursor: pointer;
+}
+
+#header .header_inner .search_box .btn_keyboard {
+    overflow: visible;
+    position: relative;
+    padding: 22px 3px;
+}
+
+#header .header_inner .search_box .btn_keyboard::before {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -240px -270px;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 14px;
+}
+
+#header .header_inner .search_box .btn_arrow::before {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -123px -98px;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 6px;
+}
+
+/* 검색창 - 자동완성, 최근검색어 펼치기 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+

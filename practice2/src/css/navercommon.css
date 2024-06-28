@@ -1,11 +1,23 @@
 /* 전체 설정 */
 * {
     padding: 0;
-	/* margin: 0; */
+	margin: 0;
 	box-sizing: border-box;
 	text-decoration: none; 
     /* font-size: 10px; */
     /* line-height: 10px; */
+}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #101010;
+    color: var(--color_body);
+    font-size: 12px;
+    line-height: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.4px;
 }
 
 /* 헤더 설정 */
@@ -78,14 +90,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 /* 헤더 - 검색창 영역*/
 #topSearchArea {
     position: absolute;
@@ -95,6 +99,16 @@
     width: 706px;
     border: 1px solid #03c75a;
     border-radius: 33px;
+    background-color: white;
+}
+
+#topSearchArea .search_logo {
+    /* width: 5px;
+    height: 5px;
+    display: inline-block; */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* 헤더 - 검색창 input 영역 */
