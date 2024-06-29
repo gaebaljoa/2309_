@@ -33,6 +33,17 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
     padding: 0;
 }
 
+legend {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    unicode-bidi: isolate;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
 #header {
     width: 1280px;
     margin: 0 auto;
@@ -46,6 +57,7 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 }
 
 #header .header_inner .search_special_bg {
+    /* .header_inner(상위요소)에게 relative를 줬기때문에, .header_inner를 기준으로 배치됨 */
     position: absolute;
     top: 0;
     right: 0;
@@ -91,6 +103,16 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
     width: 56px;
 }
 
+/* 검색창 - 자동완성, 최근검색어 펼치기 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
 #header .header_inner .search_box button[class^=btn_] {
     cursor: pointer;
 }
@@ -123,13 +145,5 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
     height: 6px;
 }
 
-/* 검색창 - 자동완성, 최근검색어 펼치기 */
-.blind {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-}
+
 
