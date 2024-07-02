@@ -44,6 +44,7 @@ legend {
     border-image: initial;
 }
 
+
 #header {
     width: 1280px;
     margin: 0 auto;
@@ -67,8 +68,6 @@ legend {
     height: 215px;
 }
 
-/* -------- search_group_inner 내부 요소들 --------- */
-
 #header .header_inner .search_area {
     position: absolute;
     top: 52px;
@@ -83,6 +82,7 @@ legend {
     transform: translateX(-50%);
 }
 
+/* -------- search_group_inner 내부 요소들 --------- */
 #header .header_inner .search_group_inner {
     position: relative;
     padding-left: 67px;
@@ -103,7 +103,8 @@ legend {
     width: 56px;
 }
 
-/* 검색창 - 자동완성, 최근검색어 펼치기 */
+/* 접근성 */
+/* 검색창 - 자동완성, 최근검색어 펼치기 등등 */
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
