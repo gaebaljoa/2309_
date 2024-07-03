@@ -57,6 +57,8 @@ legend {
     padding: 52px 0 8px;
 }
 
+
+
 #header .header_inner .search_special_bg {
     /* .header_inner(상위요소)에게 relative를 줬기때문에, .header_inner를 기준으로 배치됨 */
     position: absolute;
@@ -66,6 +68,39 @@ legend {
     z-index: -10;
     overflow: hidden;
     height: 215px;
+}
+
+#header .header_inner .menu_area {
+    position: absolute;
+    top: 5px;
+    left: -12px;
+    width: 48px;
+}
+
+#header .header_inner .pay_area {
+    position: absolute;
+    top: 5px;
+    left: 41px;
+}
+
+#header .header_inner .talk_area {
+    position: absolute;
+    top: 5px;
+    right: 94px;
+    width: 48px;
+}
+
+#header .header_inner .notify_area {
+    position: absolute;
+    top: 5px;
+    right: 42px;
+    width: 48px;
+}
+
+#header .header_inner .shopping_area {
+    position: absolute;
+    top: 5px;
+    right: -10px;
 }
 
 #header .header_inner .search_area {

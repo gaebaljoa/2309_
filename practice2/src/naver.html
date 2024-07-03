@@ -11,24 +11,6 @@
     <!-- 헤더 전체 크기 -->
     <div id="header" class="header">
         <div id="topSearchWrap" class="header_inner">
-            <!-- 바로가기 햄버거(좌측) -->
-            <div id="topNavButton">
-                <button type="button" class="btn_nav">
-                    <span class="blind">바로가기</span>
-                </button>
-            </div>
-            <!-- 네이버페이(좌측) -->
-            <div id="topPayArea">
-                <a href="https://order.pay.naver.com/home" class="btn_pay">
-                    <span class="blind">네이버페이</span>
-                </a>
-            </div>
-            <!-- 네이버톡(우측) -->
-            <div class="btn_talk">네이버톡</div>
-            <!-- 알림(우측) -->
-            <div class="btn_notify">알림&혜택</div>
-            <!-- 장바구니(우측) -->
-            <div class="btn_shopping">장바구니</div>
             <!-- 검색영역 special-logo -->
             <div id="special-logo" class="search_special_bg"></div>
             <!-- 검색바 + 버튼 -->
@@ -46,7 +28,7 @@
                         <span class="blind">NAVER</span>
                     </a>
                 </h1>
-                <form action="#" name="search_area" method="get">
+                <form action="#" class="search_area" method="get">
                     <div class="search_area">
                         <input type="text" id="search" placeholder="검색어를 입력해 주세요.">
                     </div>
@@ -55,6 +37,24 @@
                     </button>
                 </form>
             </div>
+            <!-- 바로가기 햄버거(좌측) -->
+            <div id="topNavButton" class="menu_area">
+                <button type="button" class="btn_nav">
+                    <span class="blind">바로가기</span>
+                </button>
+            </div>
+            <!-- 네이버페이(좌측) -->
+            <div id="topPayArea" class="pay_area">
+                <a href="https://order.pay.naver.com/home" class="btn_pay">
+                    <span class="blind">네이버페이</span>
+                </a>
+            </div>
+            <!-- 네이버톡(우측) -->
+            <div class="talk_area">네이버톡</div>
+            <!-- 알림(우측) -->
+            <div class="notify_area">알림&혜택</div>
+            <!-- 장바구니(우측) -->
+            <div class="shopping_area">장바구니</div>
         </div>
     </div>
 

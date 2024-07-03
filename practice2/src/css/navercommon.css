@@ -26,28 +26,17 @@ body {
     height: 215px;
     margin: 0 auto;
     background-color: aquamarine;
-    position: relative;
+    /* position: relative; */
 }
 
-/* 헤더 모든 요소 전체 wrap */
-#topSearchWrap {
+/* 헤더 전체 wrap(부모) */
+.header_inner {
+    z-index: 120;
     position: relative;
+    height: 156px;
+    padding: 52px 0 8px;
 }
 
-/* 헤더 - 바로가기 메뉴 */
-.btn_nav {
-    /* position: absolute; */
-    /* #topSearchWrap가 relative */
-    /* top: 0px;
-    left: 0px;
-    width: 33px;
-    border: none;
-    background: none; */
-    overflow: visible;
-    position: relative;
-    padding: 8px;
-    cursor: pointer;
-}
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -56,7 +45,20 @@ body {
     margin: -1px;
     overflow: hidden;
 }
-.btn_nav::after {
+
+/* 헤더 - 바로가기 메뉴 */
+.menu_area {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 33px;
+    border: none;
+    background: #64D6FF;
+    overflow: visible;
+    padding: 8px;
+    cursor: pointer;
+}
+.menu_area::after {
     content: "";
     display: block;
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.9511cab7.png);
@@ -69,15 +71,14 @@ body {
 }
 
 /* 헤더 - 네이버페이 */
-.btn_pay {
-    /* position: absolute; */
-    /* top: 5px;
-    left: 41px; */
-    position: relative;
+.pay_area {
+    position: absolute;
+    top: 5px;
+    left: 41px;
     display: block;
     padding: 8px;
 }
-.btn_pay::after {
+.pay_area::after {
     content: "";
     display: block;
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
