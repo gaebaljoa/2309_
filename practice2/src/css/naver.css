@@ -170,6 +170,12 @@ legend {
     height: 14px;
 }
 
+#header .header_inner .search_box .btn_arrow {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    padding: 26px 6px;
+}
 #header .header_inner .search_box .btn_arrow::before {
     content: "";
     display: block;
