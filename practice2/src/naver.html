@@ -1,76 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/navercommon.css">
-    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" href="../doc/favicon.ico" type="image/x-icon">
     <title>네이버입니당</title>
 </head>
 <body>
-    <!-- 헤더 전체 크기 -->
-    <div id="header" class="header">
-        <div id="topSearchWrap" class="header_inner">
-            <!-- 검색영역 special-logo -->
-            <div id="special-logo" class="search_special_bg"></div>
-            <!-- 검색바 + 버튼 -->
-            <div id="topSearchArea" class="search_area">
-                <h1 class="search_logo">
-                    <a href="/" class="link_naver type_motion_hat is_fadeout">
-                        <img src="https://s.pstatic.net/static/www/mobile/edit/20230516_0/upload_1684217675277OZzsu.gif" width="58" height="58" alt="NAVER">
-                    </a>
-                    <a href="/" class="link_naver type_motion_n is_fadein">
-                        <span class="ico_n_logo_svg">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
-                            </svg>
-                        </span>
-                        <span class="blind">NAVER</span>
-                    </a>
-                </h1>
-                <form action="#" class="search_area" method="get">
-                    <div class="search_area">
-                        <input type="text" id="search" placeholder="검색어를 입력해 주세요.">
+    <div id="wrap">
+        <!-- 헤더 전체 크기 -->
+        <div id="header" class="header">
+            <div id="topSearchWrap" class="header_inner">
+                <!-- 검색영역 special-logo -->
+                <div id="special-logo" class="search_special_bg"></div>
+                <!-- 검색바 + 버튼 -->
+                <div id="topSearchArea" class="search_area">
+                    <h1 class="search_logo">
+                        <a href="/" class="link_naver type_motion_hat is_fadeout">
+                            <img src="https://s.pstatic.net/static/www/mobile/edit/20230516_0/upload_1684217675277OZzsu.gif" width="58" height="58" alt="NAVER">
+                        </a>
+                        <a href="/" class="link_naver type_motion_n is_fadein">
+                            <span class="ico_n_logo_svg">
+                                <svg viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
+                                </svg>
+                            </span>
+                            <span class="blind">NAVER</span>
+                        </a>
+                    </h1>
+                    <form action="#" class="search_area" method="get">
+                        <div class="search_area">
+                            <input type="text" id="search" placeholder="검색어를 입력해 주세요.">
+                        </div>
+                        <button type="submit" class="btn_search">
+                            <span>검색버튼</span>
+                        </button>
+                    </form>
+                    <div class="search_box">
+                        <button id="ke_kbd_btn" type="button" class="btn_keyboard" aria-pressed="false">
+                            <span class="keybord_text">
+                                <span class="blind">입력도구</span>
+                            </span>
+                        </button>
+                        <div id="_nx_kbd" style="display:none"></div>
+                        <button id="nautocomplete" type="button" class="btn_arrow" data-atcmp-element="">
+                            <span class="blind">자동완성/최근검색어펼치기</span>
+                        </button>
                     </div>
-                    <button type="submit" class="btn_search">
-                        <span>검색버튼</span>
-                    </button>
-                </form>
-                <div class="search_box">
-                    <button id="ke_kbd_btn" type="button" class="btn_keyboard" aria-pressed="false">
-                        <span class="keybord_text">
-                            <span class="blind">입력도구</span>
-                        </span>
-                    </button>
-                    <div id="_nx_kbd" style="display:none"></div>
-                    <button id="nautocomplete" type="button" class="btn_arrow" data-atcmp-element="">
-                        <span class="blind">자동완성/최근검색어펼치기</span>
+                </div>
+                <!-- 바로가기 햄버거(좌측) -->
+                <div id="topNavButton" class="menu_area">
+                    <button type="button" class="btn_nav">
+                        <span class="blind">바로가기</span>
                     </button>
                 </div>
+                <!-- 네이버페이(좌측) -->
+                <div id="topPayArea" class="pay_area">
+                    <a href="https://order.pay.naver.com/home" class="btn_pay">
+                        <span class="blind">네이버페이</span>
+                    </a>
+                </div>
+                <!-- 네이버톡(우측) -->
+                <div class="talk_area">네이버톡</div>
+                <!-- 알림(우측) -->
+                <div class="notify_area">알림&혜택</div>
+                <!-- 장바구니(우측) -->
+                <div class="shopping_area">장바구니</div>
             </div>
-            <!-- 바로가기 햄버거(좌측) -->
-            <div id="topNavButton" class="menu_area">
-                <button type="button" class="btn_nav">
-                    <span class="blind">바로가기</span>
-                </button>
-            </div>
-            <!-- 네이버페이(좌측) -->
-            <div id="topPayArea" class="pay_area">
-                <a href="https://order.pay.naver.com/home" class="btn_pay">
-                    <span class="blind">네이버페이</span>
-                </a>
-            </div>
-            <!-- 네이버톡(우측) -->
-            <div class="talk_area">네이버톡</div>
-            <!-- 알림(우측) -->
-            <div class="notify_area">알림&혜택</div>
-            <!-- 장바구니(우측) -->
-            <div class="shopping_area">장바구니</div>
         </div>
+
+        <div id="container"></div>
+
+        <div id="footer"></div>
     </div>
-
-    <div id="container"></div>
-
-    <div id="footer"></div>
 </body>
 </html>
