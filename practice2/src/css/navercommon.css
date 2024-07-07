@@ -7,6 +7,8 @@
 }
 
 body {
+    padding: 0;
+	margin: 0;
     font-size: 1.4rem;
     line-height: 1.7rem;
     color: #101010;
@@ -59,28 +61,29 @@ legend {
     border-image: initial;
 }
 
+/* 전체 wrap */
 #wrap {
     min-width: 1340px;
-    text-align: center;
+    /* text-align: center; */
+    /* display: flex; */
 }
 
 /* 헤더 설정 */
 #header {
     width: 1280px;
     height: 215px;
-    display: inline-block;
     margin: 0 auto;
-    padding: 0;
     background-color: aquamarine;
     /* position: relative; */
 }
 
-/* 헤더 전체 wrap(부모) */
+/* 헤더 inner */
 .header_inner {
-    /* z-index: 120; */
+    z-index: 120;
     position: relative;
     height: 156px;
     padding: 52px 0 8px;
+    background-color: #BEEFFF;
     /* text-align: center; */
 }
 
@@ -98,8 +101,8 @@ legend {
 .menu_area {
     position: absolute;
     top: 0px;
-    left: 0px;
-    /* width: 33px; */
+    left: -12px;
+    width: 48px;
     border: none;
     background: #64D6FF;
     overflow: visible;
@@ -123,7 +126,8 @@ legend {
     position: absolute;
     top: 5px;
     left: 41px;
-    display: block;
+    width: 48px;
+    /* display: block; */
     padding: 8px;
 }
 .pay_area::after {
@@ -138,6 +142,76 @@ legend {
     position: relative;
 }
 
+/* 헤더 - 네이버톡 영역 */
+.talk_area {
+    position: absolute;
+    top: 5px;
+    right: 94px;
+    width: 48px;
+}
+.btn_talk {
+    overflow: visible;
+    position: relative;
+}
+.btn_talk::after {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -326px -165px;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+/* 헤더 - 알림&혜택 영역 */
+.notify_area {
+    position: absolute;
+    top: 5px;
+    right: 42px;
+    width: 48px;
+}
+.btn_notify {
+    overflow: visible;
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+}
+.btn_notify::after {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -246px -229px;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+/* 헤더 - 장바구니 & 알림 영역 */
+.shopping_area {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+}
+.link_shopping {
+    position: relative;
+    display: block;
+    padding: 8px;
+}
+.link_shopping::after {
+    content: "";
+    display: block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
+    background-size: 458px 444px;
+    background-position: -326px -99px;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
 
 /* 헤더 - 검색창 영역*/
 #topSearchArea {

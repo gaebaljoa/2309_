@@ -52,7 +52,7 @@
                 <!-- 바로가기 햄버거(좌측) -->
                 <div id="topNavButton" class="menu_area">
                     <button type="button" class="btn_nav">
-                        <span class="blind">바로가기</span>
+                        <span class="blind">확장 영역</span>
                     </button>
                 </div>
                 <!-- 네이버페이(좌측) -->
@@ -62,11 +62,24 @@
                     </a>
                 </div>
                 <!-- 네이버톡(우측) -->
-                <div class="talk_area">네이버톡</div>
+                <div id="topTalkArea" class="talk_area">
+                    <button type="button" class="btn_talk" aria-haspopup="menu" aria-expanded="false">
+                        <span class="blind">톡</span>
+                    </button>
+                </div>
                 <!-- 알림(우측) -->
-                <div class="notify_area">알림&혜택</div>
+                <div id="topNotiArea" class="notify_area">
+                    <button type="button" class="btn_notify" aria-haspopup="menu" aria-expanded="false">
+                        <span class="blind">알림</span>
+                    </button>
+                </div>
                 <!-- 장바구니(우측) -->
-                <div class="shopping_area">장바구니</div>
+                <div id="topShoppingArea" class="shopping_area">
+                    <a href="https://shopping.naver.com/cart" class="link_shopping" target="_blank">
+                        <span class="blind">장바구니</span>
+                        <span class="blind">알림</span>
+                    </a>
+                </div>
             </div>
         </div>
 
