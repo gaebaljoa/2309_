@@ -2,7 +2,7 @@
 * {
     padding: 0;
 	margin: 0;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	text-decoration: none; 
 }
 
@@ -97,8 +97,19 @@ legend {
     overflow: hidden;
 }
 
+/* 특정로고 사용시 영역 */
+#header .header_inner .search_special_bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -10;
+    overflow: hidden;
+    height: 215px;
+}
+
 /* 헤더 - 바로가기 메뉴 */
-.menu_area {
+#topNavButton {
     position: absolute;
     top: 0px;
     left: -12px;
@@ -109,7 +120,7 @@ legend {
     padding: 8px;
     cursor: pointer;
 }
-.menu_area::after {
+#topNavButton::after {
     content: "";
     display: block;
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.9511cab7.png);
@@ -120,9 +131,25 @@ legend {
     height: 32px;
     position: relative;
 }
+/* 확장상태에 주는 속성 */
+/* #header .header_inner #topShoppingArea [aria-expanded=true].link_shopping::before, #header .header_inner #topNotiArea [aria-expanded=true].btn_notify::before, #header .header_inner #topTalkArea [aria-expanded=true].btn_talk::before, #header .header_inner #topPayArea [aria-expanded=true].link_pay::before, #header .header_inner #topNavButton [aria-expanded=true].btn_menu::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #e7eced;
+} */
+
 
 /* 헤더 - 네이버페이 */
-.pay_area {
+#topPayArea {
     position: absolute;
     top: 5px;
     left: 41px;
@@ -130,7 +157,7 @@ legend {
     /* display: block; */
     padding: 8px;
 }
-.pay_area::after {
+#topPayArea::after {
     content: "";
     display: block;
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.712d35ae.png);
@@ -143,7 +170,7 @@ legend {
 }
 
 /* 헤더 - 네이버톡 영역 */
-.talk_area {
+#topTalkArea {
     position: absolute;
     top: 5px;
     right: 94px;
@@ -166,7 +193,7 @@ legend {
 }
 
 /* 헤더 - 알림&혜택 영역 */
-.notify_area {
+#topNotiArea {
     position: absolute;
     top: 5px;
     right: 42px;
@@ -191,7 +218,7 @@ legend {
 }
 
 /* 헤더 - 장바구니 & 알림 영역 */
-.shopping_area {
+#topShoppingArea {
     position: absolute;
     top: 5px;
     right: -10px;
@@ -214,32 +241,81 @@ legend {
 }
 
 /* 헤더 - 검색창 영역*/
-#topSearchArea {
+#header .header_inner #search_area {
+    box-sizing: border-box;
     position: absolute;
     top: 52px;
-    left: 25%;
-    /* z-index: 10; */
+    left: 50%;
+    z-index: 10;
     width: 706px;
     border: 1px solid #03c75a;
     border-radius: 33px;
     background-color: white;
 }
-
-#topSearchArea .search_logo {
-    /* width: 5px;
-    height: 5px;
-    display: inline-block; */
+#search_area .search_group_inner {
+    position: relative;
+    padding-left: 67px;
+}
+#search_area .search_logo {
     position: absolute;
     top: 0;
     left: 0;
 }
+#header .header_inner .search_logo .link_naver.is_fadein .ico_n_logo_svg {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: opacity .3s 3.2s cubic-bezier(0.645, 0.045, 0.355, 1), trasnfrom .3s 3.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: opacity .3s 3.2s cubic-bezier(0.645, 0.045, 0.355, 1), trasnfrom .3s 3.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: opacity .3s 3.2s cubic-bezier(0.645, 0.045, 0.355, 1), trasnfrom .3s 3.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#header .header_inner .search_logo .link_naver.type_motion_n .ico_n_logo_svg {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+}
+#header .header_inner .search_logo .link_naver .ico_n_logo_svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+#header .header_inner .search_input_box .search_input {
+    width: 100%;
+    height: 58px;
+    color: #000;
+    color: var(--color_search);
+    z-index: 10;
+    position: relative;
+    padding: 17px 0;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 2rem;
+    line-height: 24px;
+    font-weight: bold;
+    outline: 0;
+}
 
-/* 헤더 - 검색창 input 영역 */
-.search_area{
+/* 헤더 - 검색창 form 영역 */
+#sform{
     width: 639px;
     height: 58px;
 }
+#sform .search_input_box {
+    width: 480px;
+    background-color: #fff;
+}
+#sform .btn_search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 17px 27px 16px 10px;
+    cursor: pointer;
+}
 
+/* 헤더 - 검색창 키보드,화살표 영역  */
 .search_box {
     position: absolute;
     top: 0;
@@ -248,15 +324,14 @@ legend {
     z-index: 210;
     width: 56px;
 }
-
-.btn_keyboard {
+.search_box .btn_keyboard {
     overflow: visible;
     position: relative;
     padding: 20px 3px;
     background: none;
     border: none;
 }
-.btn_keyboard::before {
+.search_box .btn_keyboard::before {
     content: "";
     display: block;
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
@@ -266,14 +341,13 @@ legend {
     width: 24px;
     height: 14px;
 }
-
-.btn_arrow {
+.search_box .btn_arrow {
     position: absolute;
     top: 0;
     right: 1px;
     padding: 26px 6px;
 }
-.btn_arrow::before {
+.search_box .btn_arrow::before {
     content: "";
     display: block;
     background-image: url(https://pm.pstatic.net/resources/asset/sp_main.e0b0b60f.png);
