@@ -76,38 +76,7 @@ function db_select_boards_cnt(&$conn) {
 //			 Array		&$arr_param 쿼리 작성용 배열
 // 리턴     : Array / false
 // ---------------------------------
-// function db_select_boards_paging(&$conn, &$arr_param) {
-// 	try {
-// 		$sql = 
-// 		" SELECT "
-// 		."		id "
-// 		."		,title "
-// 		."		,create_at "
-// 		." FROM "
-// 		." 		boards "
-// 		." WHERE "
-// 		." 		delete_flg = '0' "
-// 		." ORDER BY "
-// 		." 		id DESC "
-// 		." LIMIT :list_cnt OFFSET :offset "
-// 		;
-
-// 		$arr_ps = [
-// 			":list_cnt" => $arr_param["list_cnt"]
-// 			,":offset" => $arr_param["offset"]
-// 		];
-//         var_dump($sql);
-// 		$stmt = $conn->prepare($sql);
-// 		$stmt->execute($arr_ps);
-// 		$result = $stmt->fetchAll();
-// 		return $result; // 정상 : 쿼리 결과 리턴
-// 	} catch(Exception $e) {
-// 		echo $e->getMessage(); // Exception 메세지 출력
-// 		return false; // 예외발생 : false 리턴
-// 	}
-// }
-
-function db_select_boards_paging(&$conn) {
+function db_select_boards_paging(&$conn, &$arr_param) {
 	try {
 		$sql = 
 		" SELECT "
@@ -121,10 +90,16 @@ function db_select_boards_paging(&$conn) {
 		." 		delete_flg = '0' "
 		." ORDER BY "
 		." 		id DESC "
+		." LIMIT :list_cnt OFFSET :offset "
 		;
 
+
+		$arr_ps = [
+			":list_cnt" => $arr_param["list_cnt"]
+			,":offset" => $arr_param["offset"]
+		];
 		$stmt = $conn->prepare($sql);
-		$stmt->execute();
+		$stmt->execute($arr_ps);
 		$result = $stmt->fetchAll();
 		return $result; // 정상 : 쿼리 결과 리턴
 	} catch(Exception $e) {

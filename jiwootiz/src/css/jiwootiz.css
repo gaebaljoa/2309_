@@ -18,12 +18,13 @@
     font-weight: 700;
 }
 
+
+/* header.php - menu */
 .menu {
     position: absolute;
     right: 20px;
     bottom: 0;
 }
-
 .menu>button {
     width: 200px;
     height: 60px;
@@ -31,7 +32,6 @@
     border: none;
     font-size: 30px;
 }
-
 .menu>button:hover{
     /* border-color: orange;
     color: #000;
@@ -39,6 +39,8 @@
     transform: translateY(-10px); */
     cursor: pointer;
 }
+
+
 
 .main {
     width: 1000px;
@@ -86,14 +88,14 @@ tr:nth-child(1) {
     text-decoration: underline;
 }
 
+
+/* footer.php - footer */
 .footer {
     width: 1440px;
 }
-
 .footerline {
     border-bottom: #5a5a5a 1px solid;
 }
-
 .introduction {
     text-align: center;
     margin: 40px 0;
