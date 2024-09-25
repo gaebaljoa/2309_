@@ -89,6 +89,70 @@ tr:nth-child(1) {
 }
 
 
+
+
+
+/* detail.php */
+.d_container {
+    width: 1000px;
+    height: 60%;
+    background-color: #F5F1FB;
+    border: none;
+    border-collapse: collapse;
+    margin: 0;
+    overflow: auto;
+}
+
+.d_header {
+    /* background-color: #0AC9FF; */
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5rem;
+    padding: 20px 30px;
+}
+.d_header span {
+    padding-right: 20px;
+}
+
+.d_line {
+    color: #dbdbdb;
+}
+
+.d_create_at {
+    /* background-color: #76f45d; */
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4rem;
+    text-align: right;
+    padding: 10px;
+}
+.d_create_at span {
+    padding: 0 30px;
+}
+
+.d_main {
+    background-color: #ffffff;
+    width: 900px;
+    height: 50%;
+    min-height: 300px;
+    margin: 5%;
+}
+
+.d_content {
+    padding: 20px;
+}
+
+.go_listbtn {
+    background-color: #E4D3FA;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    margin: 30px 0;
+}
+
+
 /* footer.php - footer */
 .footer {
     width: 1440px;
