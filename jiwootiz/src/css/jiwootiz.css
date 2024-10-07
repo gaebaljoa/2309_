@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+/* hedaer.php */
 .header {
     width: 1440px;
     height: 100px;
@@ -17,35 +18,34 @@
     font-size: 30px;
     font-weight: 700;
 }
-
-
-/* header.php - menu */
-.menu {
-    position: absolute;
-    right: 20px;
-    bottom: 0;
-}
-.menu>button {
-    width: 200px;
-    height: 60px;
-    background-color: white;
-    border: none;
-    font-size: 30px;
-}
-.menu>button:hover{
-    /* border-color: orange;
+.logo>a {
+    text-decoration: none;
     color: #000;
-    box-shadow: 0 0.5em 0.5em -0.4em yellow;
-    transform: translateY(-10px); */
-    cursor: pointer;
 }
 
 
 
+
+
+/* list.php */
 .main {
     width: 1000px;
     /* height: 100%; */
     margin: 50px 210px;
+}
+
+.insertbtn {
+    background-color: #E4D3FA;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    margin: 30px 0 30px auto;
+}
+.insertbtn>a {
+    text-decoration: none;
+    color: #000;
 }
 
 .main>table {
@@ -69,6 +69,16 @@ td:nth-child(2) {
 
 tr:nth-child(1) {
     border-bottom: #5a5a5a 1px solid;
+}
+
+td>a {
+    text-decoration: none;
+    color: #000;
+}
+
+td>a:hover {
+    /* text-decoration: underline; */
+    color: #787878;
 }
 
 .pagebtn {
@@ -104,30 +114,24 @@ tr:nth-child(1) {
 }
 
 .d_header {
-    /* background-color: #0AC9FF; */
     height: 50px;
     line-height: 50px;
     font-size: 1.5rem;
-    padding: 20px 30px;
+    text-align: center;
+    margin: 20px 0;
 }
 .d_header span {
     padding-right: 20px;
 }
 
-.d_line {
-    color: #dbdbdb;
-}
-
 .d_create_at {
-    /* background-color: #76f45d; */
     height: 50px;
     line-height: 50px;
     font-size: 1.4rem;
     text-align: right;
-    padding: 10px;
 }
 .d_create_at span {
-    padding: 0 30px;
+    margin-right: 55px;
 }
 
 .d_main {
@@ -142,15 +146,30 @@ tr:nth-child(1) {
     padding: 20px;
 }
 
-.go_listbtn {
+.d_btn>a {
+    display: inline-block;
     background-color: #E4D3FA;
     width: 200px;
     height: 50px;
     text-align: center;
     line-height: 50px;
     font-size: 1.5rem;
-    margin: 30px 0;
+    text-decoration: none;
+    color: #000;
 }
+
+.d_btn>.go_listbtn {
+    margin: 30px 350px 30px 0;
+}
+.d_btn>.updatebtn {
+    margin: 30px 38px 30px 0px;
+}
+.d_btn>.deletebtn {
+    margin: 30px 0 30px auto;
+}
+
+
+
 
 
 /* footer.php - footer */

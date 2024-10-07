@@ -2,15 +2,16 @@
     define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/jiwootiz/src/");
     define("FILE_HEADER", ROOT."header.php");
     define("FILE_FOOTER", ROOT."footer.php");
-    define("ERROR_MSG_PARAM", "Parameter Error : %s");
+    // define("ERROR_MSG_PARAM", "Parameter Error : %s");
     require_once(ROOT."lib/lib_db.php");
     
     // var_dump($_SERVER["REQUEST_METHOD"]);
+    // var_dump($_SERVER["DOCUMENT_ROOT"]);
 
     $conn = null;
     $list_cnt = 5;
     $page_num = 1;
-    $arr_err_msg = [];
+    // $arr_err_msg = [];
 
     try {
         if(!jw_conn($conn)) {
@@ -25,12 +26,12 @@
         $max_page_num = ceil($boards_cnt / $list_cnt);
 
         $page_num = isset($_GET["page"]) ? $_GET["page"] : "1";
-        if($page_num === "") {
-            $arr_err_msg[] = sprintf(ERROR_MSG_PARAM,"page");
-        }
-        if(count($arr_err_msg) >= 1) {
-            throw new Exception(implode("<br>", $arr_err_msg));
-        }
+        // if($page_num === "") {
+        //     $arr_err_msg[] = sprintf(ERROR_MSG_PARAM,"page");
+        // }
+        // if(count($arr_err_msg) >= 1) {
+        //     throw new Exception(implode("<br>", $arr_err_msg));
+        // }
 
         $offset = ($page_num - 1) * $list_cnt;
 
@@ -77,32 +78,41 @@
     ?> 
 
     <div class="main">
+        <div class="insertbtn">
+            <a href="/jiwootiz/src/insert.php">글 작성</a>
+        </div>
         <table>
             <tr>
                 <th>글 번호</th>
                 <th>제목</th>
-                <th>작성자</th>
                 <th>작성일자</th>
             </tr>
             <?php 
                 foreach($result as $item) {
             ?>
                 <tr>
-                    <td><?php echo $item["id"]; ?></td>
-                    <td><?php echo $item["title"]; ?></td>
-                    <td><?php echo $item["writer"]; ?></td>
+                    <td>
+                        <a href="/jiwootiz/src/detail.php/?id=<?php echo $item["id"];?>&page=<?php echo $page_num;?>">
+                            <?php echo $item["id"]; ?>
+                        </a>    
+                    </td>
+                    <td>
+                        <a href="/jiwootiz/src/detail.php/?id=<?php echo $item["id"];?>&page=<?php echo $page_num;?>">
+                            <?php echo $item["title"]; ?>
+                        </a>    
+                    </td>
                     <td><?php echo $item["create_at"]; ?></td>
                 </tr>
             <?php
                 }
             ?>
         </table>
-        <div>
+        <div class="pagebtn">
             <a href="/jiwootiz/src/list.php/?page=<?php echo $prev_page_num ?>">이전</a>
             <?php
                 for($i = 1; $i <= $max_page_num; $i++){
             ?>
-                    <a href="/jiwootiz/src/list.php/?page=<?php echo $i ?>"><?php echo $i ?></a>
+            <a href="/jiwootiz/src/list.php/?page=<?php echo $i ?>"><?php echo $i ?></a>
             <?php
                 }
             ?>
