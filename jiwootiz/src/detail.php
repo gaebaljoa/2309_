@@ -2,22 +2,21 @@
     define("ROOT", $_SERVER["DOCUMENT_ROOT"]."/jiwootiz/src/");
     define("FILE_HEADER", ROOT."header.php");
     define("FILE_FOOTER", ROOT."footer.php");
-    // define("ERROR_MSG_PARAM", "Parameter Error : %s");
     require_once(ROOT."lib/lib_db.php");
     $conn = null;
 
     $id = "";
 
     try {
-        if(!jw_conn($conn)) {
+        if(!(jw_conn($conn))) {
             throw new Exception( "DB ERROR : PDO Instance" );
         }
+        
         if(!isset($_GET["id"]) || $_GET["id"] === "") {
             throw new Exception( "Parameter ERROR : NO id" );
         }
 
         $id = $_GET["id"];
-        $page = $_GET["page"];
 
         $arr_param = [
             "id" => $id
@@ -32,14 +31,18 @@
             throw new Exception("DB ERROR : PDO Select_id count,".count($result));
         }
 
-        $item = $result[0];
+        if(isset($result[0])) {
+            $item = $result[0];
+        } else {
+            throw new Exception("DB ERROR: Invalid result");
+        }
     } 
     catch(Exception $e) {
-        header("Location: error.php/?err_msg={$e->getMessage()}");
+        header("Location: error.php?err_msg={$e->getMessage()}");
         exit;
     }
     finally {
-        db_destroy_conn($conn);
+        db_destroy_conn($conn); 
     }
 
 ?>
@@ -70,8 +73,8 @@
         </div>
         <div class="d_btn">
             <a class="go_listbtn" href="/jiwootiz/src/list.php">목록</a>
-            <a class="updatebtn" href="/jiwootiz/src/list.php">수정</a>
-            <a class="deletebtn" href="/jiwootiz/src/list.php">삭제</a>
+            <a class="updatebtn" href="/jiwootiz/src/update.php">수정</a>
+            <a class="deletebtn" href="/jiwootiz/src/delete.php">삭제</a>
         </div>
     </div>
     <?php
