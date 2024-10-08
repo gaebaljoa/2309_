@@ -172,6 +172,36 @@ td>a:hover {
 
 
 
+/* error.php */
+.e_header {
+    width: 1000px;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 7rem;
+    color: #E4D3FA;
+}
+.e_msg {
+    width: 1000px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 2rem;
+    color: #000;
+}
+.e_errmsg {
+    width: 1000px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+
+
+
+
 /* footer.php - footer */
 .footer {
     width: 1440px;
