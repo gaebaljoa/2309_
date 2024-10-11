@@ -67,6 +67,9 @@
     <title>지우티즈</title>
 </head>
 <body>
+    <?php foreach($arr_err_msg as $val) {
+			?> <p class="err_msg"><?php echo $val; ?></p>
+	<?php } ?>
     <?php
         require_once(FILE_HEADER);
     ?>
