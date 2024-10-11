@@ -177,7 +177,7 @@ td>a:hover {
 /* inert.php */
 .d_container>label {
     font-size: 1.5rem;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 .d_header>label {
@@ -195,7 +195,8 @@ td>a:hover {
     width: 900px;
     height: 50%;
     min-height: 300px;
-    margin: 0 5% 5% 5%;
+    margin: 0 5% 5% 4%;
+    overflow: hidden;
 }
 .i_main>textarea {
     width: 100%;

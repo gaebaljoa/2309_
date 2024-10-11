@@ -16,14 +16,47 @@
 
     if($http_method === "POST") {
         try {
-            
-        } catch {
+            $title = isset($_POST["title"]) ? trim($_POST["title"]) : "";
+            $content = isset($_POST["content"]) ? trim($_POST["content"]) : "";
 
+            if($title === "") {
+                $arr_err_msg[] = sprintf(ERROR_MSG_PARAM, "제목");
+            }
+            if($content === "") {
+                $arr_err_msg[] = sprintf(ERROR_MSG_PARAM, "내용");
+            }
+
+            if(count($arr_err_msg) === 0) {
+                if(!jw_conn($conn)) {
+                    throw new Exception("DB ERROR : PDO Instance");
+                }
+
+                $conn->beginTransaction();
+
+                $arr_param = [
+                    "title" => $_POST["title"]
+                    ,"content" => $_POST["content"]
+                ];
+                
+                if(!db_insert_boards($conn, $arr_param)) {
+                    throw new Exception("DB ERROR : Insert Boards");
+                }
+
+                $conn->commit();
+
+                header("Location: list.php");
+                exit;
+            }
+        } catch(Exception $e) {
+            if($conn !== null) {
+                $conn->rollback();
+            }
+            header("Location: /jiwootiz/src/error.php?err_msg={$e->getMessage()}");
+            exit;
         } finally {
-
+            db_destroy_conn($conn);
         }
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

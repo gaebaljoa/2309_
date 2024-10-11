@@ -143,6 +143,42 @@ function db_select_boards_id(&$conn, &$arr_param) {
 	} 
 }
 
+
+// ---------------------------------
+// 함수명   : db_insert_boards
+// 기능     : boards 레코드 작성
+// 파라미터 : PDO		&$conn
+//			 Array		&$arr_param 쿼리 작성용 배열
+// 리턴     : Boolean
+// ---------------------------------
+function db_insert_boards(&$conn, &$arr_param) {
+	$sql = 
+			" INSERT INTO boards ( "
+			."				title "
+			."				,content "
+			." ) "
+			." VALUES ( "
+			."				:title "
+			."				,:content "
+			." ) "
+			;
+
+	$arr_ps = [
+			":title" => $arr_param["title"]
+			,":content" => $arr_param["content"]
+	];
+
+	try {
+		$stmt = $conn->prepare($sql);
+		$result = $stmt->execute($arr_ps);
+		return $result;
+	} catch(Exception $e) {
+		echo $e->getMessage(); 
+		return false; 
+	}
+}
+
+
 // ---------------------------------
 // 함수명   : db_destroy_conn
 // 기능     : DB Destroy
