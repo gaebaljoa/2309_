@@ -175,6 +175,12 @@ td>a:hover {
 
 
 /* inert.php */
+.i_err_msg {
+    text-align: center;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
 .d_container>label {
     font-size: 1.5rem;
     margin-left: 40px;
@@ -193,10 +199,8 @@ td>a:hover {
 .i_main {
     background-color: #ffffff;
     width: 900px;
-    height: 50%;
-    min-height: 300px;
+    height: 300px;
     margin: 0 5% 5% 4%;
-    overflow: hidden;
 }
 .i_main>textarea {
     width: 100%;

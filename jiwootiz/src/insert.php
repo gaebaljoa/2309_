@@ -8,7 +8,7 @@
     $conn = null;
 
     $http_method = $_SERVER["REQUEST_METHOD"];
-    var_dump($http_method);
+    // var_dump($http_method);
     $arr_err_msg = [];
 
     $title = "";
@@ -67,13 +67,15 @@
     <title>지우티즈</title>
 </head>
 <body>
-    <?php foreach($arr_err_msg as $val) {
-			?> <p class="err_msg"><?php echo $val; ?></p>
-	<?php } ?>
     <?php
         require_once(FILE_HEADER);
     ?>
     <div class="main">
+        <div class="i_err_msg">
+        <?php foreach($arr_err_msg as $val) {
+                ?> <p class="err_msg"><?php echo $val; ?></p>
+        <?php } ?>
+        </div>
         <form action="/jiwootiz/src/insert.php" method="post">
             <div class="d_container">
                 <div class="d_header">
