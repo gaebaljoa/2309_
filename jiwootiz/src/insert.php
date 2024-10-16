@@ -72,8 +72,8 @@
     ?>
     <div class="main">
         <div class="i_err_msg">
-        <?php foreach($arr_err_msg as $val) {
-                ?> <p class="err_msg"><?php echo $val; ?></p>
+        <?php foreach($arr_err_msg as $val) { ?> 
+            <p class="err_msg"><?php echo $val; ?></p>
         <?php } ?>
         </div>
         <form action="/jiwootiz/src/insert.php" method="post">
