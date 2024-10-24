@@ -255,6 +255,26 @@ td>a:hover {
 
 
 
+/* delete.php */
+.d_warning {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 2.2rem;
+    color: 	#8F7CEE;
+    margin-bottom: 50px;
+}
+
+.d_btn>.cancelbtn {
+    margin: 30px 593px 30px 0;
+}
+
+
+
+
+
 /* footer.php - footer */
 .footer {
     width: 1440px;

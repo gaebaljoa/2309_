@@ -18,8 +18,8 @@
 
         $id = $_GET["id"];
         $page = $_GET["page"];
-        var_dump($id);
-        var_dump($page);
+        // var_dump($id);
+        // var_dump($page);
 
         $arr_param = [
             "id" => $id
@@ -75,9 +75,9 @@
             </div>
         </div>
         <div class="d_btn">
-            <a class="go_listbtn" href="/jiwootiz/src/list.php">목록</a>
+            <a class="go_listbtn" href="/jiwootiz/src/list.php?page=<?php echo $page ?>">목록</a>
             <a class="updatebtn" href="/jiwootiz/src/update.php?id=<?php echo $id ?>&page=<?php echo $page ?>">수정</a>
-            <a class="deletebtn" href="/jiwootiz/src/delete.php">삭제</a>
+            <a class="deletebtn" href="/jiwootiz/src/delete.php?id=<?php echo $id ?>&page=<?php echo $page ?>">삭제</a>
         </div>
     </div>
     <?php
