@@ -267,10 +267,38 @@ td>a:hover {
     margin-bottom: 50px;
 }
 
-.d_btn>.cancelbtn {
+
+.d_btn>form>a {
+    display: inline-block;
+    background-color: #E4D3FA;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000;
+}
+.d_btn>form>button {
+    display: inline-block;
+    background-color: #E4D3FA;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #000;
+    border: none;
+}
+
+.d_btn>form>.cancelbtn {
     margin: 30px 593px 30px 0;
 }
 
+.d_btn>form>.deletebtn {
+    margin: 30px 0 30px auto;
+}
 
 
 

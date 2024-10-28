@@ -224,7 +224,7 @@ function db_delete_boards_id(&$conn, &$arr_param) {
 	$sql =
 	" UPDATE boards	"
 	." SET "
-	." 		,delete_flg = '1' "
+	." 		delete_flg = '1' "
 	." WHERE "
 	." 		id = :id "
 	;

@@ -68,7 +68,7 @@
 
             $conn->commit();
 
-            header("Location : list.php");
+            header("Location: list.php");
             exit;
         }
     } catch(Exception $e) {
@@ -110,7 +110,8 @@
             </div>
         </div>
         <div class="d_btn">
-            <form action="/jiwootiz/src/delete.php" method="post">                
+            <form action="/jiwootiz/src/delete.php" method="post"> 
+                <input type="hidden" name="id" value="<?php echo $id; ?>">               
                 <a class="cancelbtn" href="/jiwootiz/src/detail.php?id=<?php echo $id ?>&page=<?php echo $page ?>">취소</a>
                 <button class="deletebtn" type="submit">삭제</button>
             </form>

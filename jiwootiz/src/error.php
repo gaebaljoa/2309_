@@ -7,7 +7,6 @@
     $conn = null;
 
     $err_msg = isset($_GET["err_msg"]) ? $_GET["err_msg"] : "";
-    var_dump($_GET["id"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
