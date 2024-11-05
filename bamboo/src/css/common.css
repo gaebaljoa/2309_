@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* list 페이지 */
+header {
+    width: calc(100vw - 34px);
+    height: 200px;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+    border: 8px solid #3BB1FA;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    width: calc(100vw - 17px);
+}
+
+.insertbtn {
+    text-align: right;
+}
+
+.insertbtn a {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+    background-color: #B2E2FF;
+    text-decoration: none;
+    color: #000;
+    margin: 2vh 15vw 0 0;
+}
+
+.list table {
+    width: 70vw;
+    margin: auto;
+    border: #000;
+    border-spacing: 0 50px;
+}
+
+.list table tr {
+    text-align: center;
+}
+
+.list table tr td {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3BB1FA;
+}
+
+.pagebtn {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pagebtn a {
+    color: #000;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+/* detail 페이지 */
+.d_container {
+    text-align: center;
+    background-color: antiquewhite;
+    margin: 50px ;
+}
+
+.d_title {
+    display: inline-block;
+    width: 50vw;
+    height: 30px;
+    background-color: #3BB1FA;
+}
