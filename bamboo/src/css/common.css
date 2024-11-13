@@ -56,6 +56,12 @@ main {
     border-bottom: 1px solid #3BB1FA;
 }
 
+.list table tr td a {
+    color: #000;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
 .pagebtn {
     text-align: center;
     margin-bottom: 30px;
