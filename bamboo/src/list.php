@@ -89,12 +89,12 @@
                 ?>
                     <tr>
                         <td>
-                            <a href="/bamboo/src/detail.php?id=<?php $item["id"] ?>">
+                            <a href="/bamboo/src/detail.php?id=<?php echo $item["id"] ?>&page=<?php echo $page_num;?>">
                                 <?php echo $item["id"] ?>
                             </a>
                         </td>
                         <td>
-                            <a href="/bamboo/src/detail.php?id=<?php $item["id"] ?>">
+                            <a href="/bamboo/src/detail.php?id=<?php echo $item["id"] ?>&page=<?php echo $page_num;?>">
                                 <?php echo $item["title"] ?>
                             </a>
                         </td>

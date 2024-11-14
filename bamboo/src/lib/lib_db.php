@@ -105,4 +105,41 @@ function db_select_boards_paging( &$conn, &$arr_param ) {
     };
 }
 
+
+// ---------------------------------
+// 함수명   : db_select_boards_id
+// 기능     : boards id 조회
+// 파라미터 : PDO		&$conn
+//			 Array		&$arr_param 쿼리 작성용 배열
+// 리턴     : Array / false
+// ---------------------------------
+function db_select_boards_id( &$conn, &$arr_param ) {
+    try {
+        $sql =
+        "   SELECT "
+        ."      id "
+        ."      ,title "
+        ."      ,content "
+        ."      ,DATE(create_at) AS create_at "
+        ."  FROM "
+        ."      boards "
+        ."  WHERE "
+        ."      id = :id "
+        ."  AND "
+        ."      delete_flg = '0' "
+        ;
+
+        $arr_ps = [
+            ":id" => $arr_param["id"]
+        ];
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($arr_ps);
+        $result = $stmt->fetchAll();
+        return $result;
+    } catch(Exception $e) {
+        echo $e->getMessage();
+        return false;
+    }
+}
 ?>
