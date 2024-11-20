@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="header">
-            <a href="bamboo/src/list.php">대나무숲</a>
+            <a href="/bamboo/src/list.php">대나무숲</a>
         </div>
     </header>
 </body>

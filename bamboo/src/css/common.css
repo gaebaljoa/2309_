@@ -88,7 +88,8 @@ main {
     height: 30px;
     line-height: 30px;
     border: 2px solid #D3F1FC;
-    margin: 100px 0 20px 0;
+    /* margin: 100px 0 20px 0; */
+    margin: 20vh 0 20px 0;
     /* background-color: #3BB1FA; */
 }
 
@@ -123,9 +124,21 @@ main {
 
 
 /* insert 페이지 */
+.i_err_msg {
+    text-align: center;
+    width: 100vw;
+    height: 20vh;
+    line-height: 20vh;
+}
+.i_err_msg b {
+    color: #FA3B3F;
+
+}
+
 .i_container {
     text-align: center;
-    margin: 100px 0 30px 0;
+    /* margin: 50px 0 30px 0; */
+    margin: 0px 0 30px 0;
 }
 
 .i_title label {
@@ -181,6 +194,8 @@ main {
     border: none;
     font-family: inherit;
 }
+
+
 
 
 
