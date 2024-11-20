@@ -52,7 +52,7 @@
             }
 
         } catch(Exception $e) {
-            // db 연동이 안됨 = 트랜잭션 시작 이전, db 연동 후 false = 트랜잭션 시작 이후
+            // db 연동이 안됨 = 트랜잭션 시작 이전, db 연동 후 false = 트랜잭션 시작 이후 에러 발생
             // db_insert_boards 함수 실패 시
             if($conn !== null) {
                 $conn->rollback();
