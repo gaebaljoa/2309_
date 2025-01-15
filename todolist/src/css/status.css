@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 상태바 전체 영역 */
+.status_container {
+    width: 200px;
+    height: 1080px;
+    margin-top: 80px;
+    padding: 50px 30px;
+    float: left;
+    /* background-color: aquamarine; */
+}
+
+/* 상태바 헤더 로고 */
+.status_header {
+    font-size: 1.3rem;
+}
+
+/* in-progress 앞 동그라미 */
+.status_inprogress {
+    width: 10px;
+	height: 10px;
+	background-color: #5398F8;
+	border-radius: 50%;
+	display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* complete 앞 동그라미 */
+.status_complete {
+    width: 10px;
+	height: 10px;
+	background-color: #44DE54;
+	border-radius: 50%;
+	display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* 상태바 버튼 공통 스타일 */
+.status_btn {
+    text-decoration: none;
+	color: rgb(224, 224, 224);
+    font-size: 1.1rem;
+}
+
+/* 상태바 버튼 선택 시 스타일 */
+.status_btn_chk {
+    color: black;
+}

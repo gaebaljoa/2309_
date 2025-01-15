@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/in-progress.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <title>현재진행중</title>
+</head>
+<body>
+    <header>
+        <a href="/todolist/src/in-progress.php" class="h_header">갓생살기</a>
+    </header>
+    <main>
+        <div class="inprogress_container">
+            <!-- 서버로 전송될 post(사용자의 입력(리스트 선택)) -->
+            <form class="form_inprogress" action="/todolist/src/in-progress.php" method="post">
+                <div class="create_id">
+                    <p>2024-11-09</p>
+                </div>    
+                <div class="challenge_name">
+                    <p>건강한 아침</p>
+                </div>
+                <div class="progress_bar">
+                    <progress value="50" max="100"></progress>
+                </div>
+                <div class="inprogress_button">
+                    <input type="hidden" name="create_id" value="">
+                    <button class="button-com" name="l_id" value="">
+                        <p class="list_menu">스트래칭</p>
+                        <p class="list_complete">1/1</p>
+                    </button>
+                    <button class="button-in" name="l_id" value="">
+                        <p class="list_menu">물 마시기</p>
+                        <p class="list_complete">0/1</p>
+                    </button>
+                    <button class="button-in" name="l_id" value="">
+                        <p class="list_menu">햇볕 쬐기</p>
+                        <p class="list_complete">0/1</p>
+                    </button>
+                    <button class="button-in" name="l_id" value="">
+                        <p class="list_menu">아침식사</p>
+                        <p class="list_complete">0/1</p>
+                    </button>
+                </div>
+            </form>
+            <!-- 서버로 전송될 post(사용자 입력(해당 챌린지 삭제)) -->
+            <form class="trash_box" action="todolist/src/delete.php" method="post">
+                <!-- 서버로 전송될 hidden 타입의 value (해당 챌린지의 create_id) -->
+                <input type="hidden" value="">
+                <button type="submit" class="trash"></button>
+            </form>
+            <p class="err_msg">
+                No item in-progress
+            </p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.h_header {
+	display: inline-block;
+	color: #FFCACA;
+	font-size: 2rem;
+	background-color: white;
+	width: 500px;
+	height: 80px;
+	line-height: 80px;
+	margin-left: 70px;
+	/* position: absolute;
+	top: 0; */
+}
+
+a {
+	text-decoration: none;
+}

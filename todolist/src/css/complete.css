@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* complete 페이지 전체 영역 */
+.complete_container {
+    width: 1440px;
+    height: 1080px;
+    background-color: #F2F4F7;
+    margin-top: 80px;
+    margin-left: 200px;
+    padding: 35px 60px;
+    border-radius: 50px 0 0 50px / 50px 0 0 50px;
+}
+
+
+
+
+/* 챌린지 박스 배경 */
+.complete_background {
+    float: left;
+    width: 400px;
+    height: 255px;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding-top: 18px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* 챌린지 박스 내부 선 */
+.complete_border {
+    box-sizing: border-box;
+    width: 360px;
+    height: 215px;
+    border: 3px solid #FFCACA;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 20px;
+    /* 내부 선 오른쪽 */
+    padding-right: 50px;
+}
+
+
+
+
+/* 챌린지 박스 헤더 */
+/* 챌린지 박스 헤더 - 생성id */
+.complete_challenge_name span {
+    display: inline;
+    color: #FFCACA;
+}
+/* 챌린지 박스 헤더 - 챌린지명 */
+.complete_challenge_name {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+/* 챌린지 박스 헤더 - 생성일자 */
+.complete_create_at{
+    display: inline-block;
+    font-size: 11px;
+    margin-left: 10px;
+    color: #727272;
+}
+/* 챌린지 박스 헤더 - 완료일자 */
+.complete_create_at span {
+    display: inline;
+    color: #D36969;
+}
+
+
+
+
+/* 챌린지 박스 리스트 목록 */
+ul {
+    list-style: none;
+}
+li {
+    margin-left: 3px;
+    line-height: 25px;
+}
+/* 챌린지 박스 리스트 목록의 불렛 */
+.complete_list_bullet {
+    width: 15px;
+	height: 15px;
+	background-color: #FFCACA;
+	border-radius: 50%;
+	display: inline-block;
+    margin-right: 13px;
+    vertical-align: middle;
+}
+/* 챌린지 박스 리스트 목록의 하위 선 */
+.complete_list_line {
+    border-top: 3px solid #FFCACA;
+    margin-left: 34px;
+    margin-top: 3px;
+}
+
+
+
+
+/* 휴지통 버튼 */
+.complete_delete {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 300px;
+    background-image: url("../img/icon_trash_.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+/* 페이지 버튼 */
+.complete_pagebtn {
+    position: fixed;
+    left: 50%;
+    /* transform: translateX( -50% ); */
+    bottom: 30px;
+}
+
+.complete_normal_page {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.complete_active_page {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FFCACA;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+
+
+
+
+/* 완료된 챌린지 없을 때 */
+.err_msg {
+	text-align: center;
+	line-height: 1000px;
+	color: gray;
+}

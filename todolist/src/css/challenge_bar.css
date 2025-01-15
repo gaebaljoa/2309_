@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 챌린지바 전체 영역 */
+.challenge_container {
+    width: 280px;
+    height: 980px;
+    /* background-color: aquamarine; */
+    float: right;
+    top: 0;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    box-shadow: -3px 0px 7px 0.5px rgba(197, 197, 197, 0.301);
+}
+
+/* 챌린지바 헤더 전체 영역 */
+.challenge_header {
+    width: 230px;
+    height: 130px;
+    margin: 15px auto;
+}
+
+/* 챌린지바 헤더 로고 */
+.challenge_logo {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+/* 챌린지 생성 insert 버튼 */
+.challenge_insert {
+    width: 50px;
+    height: 50px;
+    background-color: #FFCACA;
+    opacity: 70%;
+    float: right;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+}
+.challenge_insert:hover {
+    opacity: 100%;
+}
+
+/* 챌린지 리스트 버튼 기본 스타일 (미선택) */ 
+.challenge_list { 
+    display: block;
+    width: 200px;
+    height: 90px;
+    border: 6px solid #FFE0E0;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* 챌린지 리스트 버튼 (선택) */
+.challenge_choice {
+    background-color: #FFCACA;
+}
+
+/* 챌린지 리스트 버튼 (챌린지 완료) */
+.challenge_complete {
+    background-image: url("../img/AurelionSol_0.jpg");
+    color: white;
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}

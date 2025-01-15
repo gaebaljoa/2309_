@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 영역 - 배경사진 */
+.delete_body {
+    background-image: url(../img/AurelionSol_0.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.454); */
+}
+
+
+/* grid 설정을 위한 전체 영역 */
+.delete_container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(159, 159, 159, 0.6);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+
+/* 삭제 박스 */
+.delete_box {
+	box-sizing: border-box;
+	border-radius: 5%;
+	width: 500px;
+	height: 295px;
+	background-color: rgba(54, 54, 54, 0.5);
+	color: rgb(251, 251, 251);
+	text-align: center;
+	margin: 0 auto;
+    line-height: 90px;
+}
+
+
+/* 삭제 버튼 form  */
+.delete_form {
+    width: 400px;
+    height: 100px;
+    /* background-color: aquamarine; */
+    position: relative;
+    margin: auto;
+}
+/* 아니오 버튼 - a 태그 */
+.delete_btn1 {
+	box-sizing: border-box;
+	border: none;
+	background-color: white;
+	width: 110px;
+	height: 40px;
+	font-size: large;
+	/* margin-bottom: -200px; */
+	border-radius: 10%;
+	/* margin-right: 200px; */
+	position: absolute;
+	left: 0px;
+	top: 20px;
+	line-height: 35px;
+	text-decoration: none;
+}
+/* 예 버튼 - button 태그 */
+.delete_btn2 {
+    display: inline-block;
+	box-sizing: border-box;
+	border: none;
+	background-color: white;
+	width: 110px;
+	height: 40px;
+	font-size: large;
+	/* margin-bottom: -200px; */
+	border-radius: 10%;
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	line-height: 35px;
+	color: red;
+    cursor: pointer;
+}
+

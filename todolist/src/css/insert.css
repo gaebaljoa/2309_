@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* insert 전체 영역 스타일 */
+.insert_container {
+    width: 1700px;
+    height: 1080px;
+    background-color: #F2F4F7;
+    margin: 80px 0 0 200px;
+    padding: 30px;
+    border-radius: 50px 0 0 50px / 50px 0 0 50px;
+}
+
+/* 생성일자 출력 스타일 */
+.insert_create_at {
+    font-size: 1.3rem;
+    margin: 20px 20px 20px 150px;
+}
+
+/* label 스타일 */
+.challenge_box {
+    width: 500px;
+    height: 200px;
+    display: inline-block;
+    background-color: white;
+    padding: 10px;
+    margin-left: 150px;
+    margin-top: 35px;
+    border:1px solid #F2F4F7;
+    border-radius: 10px;
+    box-shadow: 2px 4px 6px gray;
+    box-sizing: border-box;
+}
+
+/* input의 라디오 버튼 숨기기 */
+.challenge_box_container input[type="radio"] {
+	display: none;
+}
+
+
+footer {
+    position: fixed;
+    right: 200px;
+    bottom: 10px;
+}
+
+/* button 태그 - insert 확인 */
+.insert_yesbtn {
+	width:80px;
+	height:40px;
+    margin: 10px;
+    background-color:#E4E4E4;
+	border:none;
+	border-radius: 5px;
+    box-shadow: 2px 4px 6px gray;
+	cursor: pointer;
+	font-weight: light;
+}
+
+/* a 태그 - isnert 취소 */
+.insert_nobtn {
+	width:80px;
+	height:40px;
+    margin: 10px;
+    background-color:#E4E4E4;
+	border:1px solid #E4E4E4;
+	border-radius: 5px;
+    box-shadow: 2px 4px 6px gray;
+	text-decoration: none;
+	color:black;
+	cursor:pointer;
+	padding: 8px 25px;
+	font-size: 0.9rem;
+}
+
+#c_id1:checked + label
+, #c_id2:checked + label
+, #c_id3:checked + label
+, #c_id4:checked + label
+, #c_id5:checked + label{
+	background-color: #FFDEAC;
+}

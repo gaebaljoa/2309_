@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 1440px;
+    height: 1080px;
+}
+
+.inprogress_container {
+    width: 100%;
+    height: 100%;
+    background-color: #F2F4F7;
+    margin: 0 5%;
+    margin-left: 200px;
+    /* margin-top: 80px; */
+    border-radius: 50px 0 0 50px / 50px 0 0 50px;
+}
+.create_id {
+    padding-top: 20px;
+}
+.create_id, .challenge_name {
+    margin: 0 0 10px 5%;
+}
+.create_id p {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+.challenge_name p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+/* 진행바를 감싸고 있는 div */
+.progress_bar {
+    margin: 50px 0 40px 5%;
+}
+/* 전체 progress 태그 스타일 */
+.progress_bar progress {
+    width: 84%;
+    height: 100px;
+    appearance: none; /* 기본 브라우저 스타일 제거 */
+    margin-bottom: 70px;
+    box-sizing: border-box;
+    background: #f0f0f0; /* 배경색 */
+    border-radius: 25px; /* 둥근 모서리 */
+    box-shadow: inset 3px 3px 10px #ccc; /* 내부 그림자 */
+    overflow: hidden; /* 내부 요소가 모서리를 넘어가지 않게 */
+}
+/* 진행바의 진행상황표시 부분 */
+.progress_bar progress::-webkit-progress-value {
+    background: linear-gradient(to right, #86DCF4, #62B6F5); /* 색상 그라데이션 */
+    border-radius: 25px 25px 25px 25px / 25px 0 0 25px; /* 둥근 모서리 */
+}
+/* 진행바의 배경 부분 */
+.progress_bar progress::-webkit-progress-bar {
+    background: #f0f0f0; /* 배경색 */
+    border-radius: 25px;
+}
+
+
+/* 리스트 버튼 */
+.inprogress_button button{
+    width: 80%;
+    height: 90px;
+    margin: 0 0 50px 5%;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* 리스트 진행중 버튼 */
+.inprogress_button .button-in {
+	background-color: #dcdcdc;
+}
+
+/* 리스트 완료 버튼 */
+.inprogress_button .button-com {
+    background-color: #828282;
+}
+
+
+/* 휴지통 버튼 */
+.trash_box button {
+    background-image: url(../img/trash.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: 0 10% 0 80%;
+    cursor: pointer;
+}
+
+
+
+
+/* 진행중 챌린지 없을 때 */
+.err_msg {
+	text-align: center;
+	line-height: 1000px;
+	color: gray;
+}
